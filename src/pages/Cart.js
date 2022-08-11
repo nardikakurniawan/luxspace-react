@@ -4,8 +4,8 @@ import Header from "parts/Header";
 import SiteMap from "parts/SiteMap";
 import Footer from "parts/Footer";
 import Breadcrumb from "components/Breadcrumb";
-import ProductDetails from "parts/Details/ProductDetails";
-import Suggestion from "parts/Details/Suggestion";
+import ShoppingCart from "parts/Cart/ShoppingCart";
+import ShippingDetails from "parts/Cart/ShippingDetails";
 
 export default function Details() {
   return (
@@ -14,12 +14,18 @@ export default function Details() {
       <Breadcrumb
         list={[
           { url: "/", name: "Home" },
-          { url: "/categories/91231", name: "Office Room" },
-          { url: "/categories/91231/products/888", name: "Details" },
+          { url: "/cart", name: "Shopping Cart" },
         ]}
       />
-      <ProductDetails />
-      <Suggestion />
+
+      <section className="md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex -mx-4 flex-wrap">
+            <ShoppingCart />
+            <ShippingDetails />
+          </div>
+        </div>
+      </section>
 
       <SiteMap />
       <Footer />
