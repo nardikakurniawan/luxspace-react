@@ -1,11 +1,12 @@
 import React from "react";
 
 import Header from "parts/Header";
+import Clients from "parts/Clients";
 import SiteMap from "parts/SiteMap";
 import Footer from "parts/Footer";
 import Breadcrumb from "components/Breadcrumb";
-// import BrowseRoom from "parts/HomePage/BrowseRoom";
-// import JustArrived from "parts/HomePage/JustArrived";
+import ProductDetails from "parts/Details/ProductDetails";
+import Suggestion from "parts/Details/Suggestion";
 
 export default function Details() {
   return (
@@ -18,6 +19,10 @@ export default function Details() {
           { url: "/categories/91231/products/888", name: "Details" },
         ]}
       />
+      <ProductDetails />
+      <Suggestion />
+
+      {/* <Clients /> */}
       <SiteMap />
       <Footer />
     </>
