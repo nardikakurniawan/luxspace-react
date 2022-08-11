@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function SiteMap() {
   return (
@@ -7,7 +7,7 @@ export default function SiteMap() {
       <div className="border-t border-b border-gray-200 py-12 mt-16 px-4">
         <div className="flex justify-center mb-8">
           <img
-            src="images/content/logo.png"
+            src="/images/content/logo.png"
             alt="Luxspace | Fulfill your house with beautiful furniture"
           />
         </div>
@@ -62,7 +62,10 @@ export default function SiteMap() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" className="hover:underline py-1 block">
+                  <Link
+                    to="/privacy-policy"
+                    className="hover:underline py-1 block"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
