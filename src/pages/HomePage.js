@@ -9,9 +9,11 @@ import BrowseRoom from "parts/HomePage/BrowseRoom";
 import JustArrived from "parts/HomePage/JustArrived";
 
 import useScrollAnchor from "helpers/hooks/useScrollAnchor";
+import useModalDOM from "helpers/hooks/useModalDOM";
 
 export default function HomePage() {
   useScrollAnchor();
+  useModalDOM();
 
   return (
     <>
