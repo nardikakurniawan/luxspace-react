@@ -88,7 +88,7 @@ export default function BrowseRoom() {
     },
   };
 
-  console.log(data, status, error);
+  // console.log(data, status, error);
   return (
     <section className="flex bg-gray-100 py-16 px-4" id="browse-the-room">
       <div className="container mx-auto">
