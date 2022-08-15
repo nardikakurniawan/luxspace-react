@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Header({ theme, position }) {
-  console.log(position);
   return (
     <header className={[position, "w-full z-20 px-4"].join(" ")}>
       <div className="container mx-auto py-5">
