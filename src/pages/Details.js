@@ -1,4 +1,8 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
+import useAsync from "helpers/hooks/useAsync";
+import fetch from "helpers/fetch";
 
 import Header from "parts/Header";
 import SiteMap from "parts/SiteMap";
@@ -8,6 +12,15 @@ import ProductDetails from "parts/Details/ProductDetails";
 import Suggestion from "parts/Details/Suggestion";
 
 export default function Details() {
+  const { idp } = useParams();
+
+  const { data, run, isLoading } = useAsync();
+
+  React.useEffect(() => {
+    run(fetch({ url: `/api/products/${idp}` }));
+  }, [run]);
+
+  // console.log(data);
   return (
     <>
       <Header theme="black" />
@@ -18,8 +31,8 @@ export default function Details() {
           { url: "/categories/91231/products/888", name: "Details" },
         ]}
       />
-      <ProductDetails />
-      <Suggestion />
+      <ProductDetails data={data} />
+      <Suggestion data={data?.relatedProducts || {}} />
 
       <SiteMap />
       <Footer />
