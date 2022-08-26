@@ -31,8 +31,13 @@ export default function Details() {
           { url: "/categories/91231/products/888", name: "Details" },
         ]}
       />
-      <ProductDetails data={data} />
-      <Suggestion data={data?.relatedProducts || {}} />
+      {isLoading ? "Loading" : <ProductDetails data={data} />}
+
+      {isLoading ? (
+        "Loading"
+      ) : (
+        <Suggestion data={data?.relatedProducts || {}} />
+      )}
 
       <SiteMap />
       <Footer />
