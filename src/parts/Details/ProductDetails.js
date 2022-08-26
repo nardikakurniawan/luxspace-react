@@ -5,8 +5,6 @@ import HtmlReactParser from "html-react-parser";
 export default function ProductDetails({ data }) {
   const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "");
 
-  console.log(data);
-
   return (
     <section className="container mx-auto">
       <div className="flex flex-wrap my-4 md:my-12">
